@@ -94,6 +94,9 @@ return {
 			j = { "<cmd>clo<CR>", "drop split" },
 			-- h = { "<cmd>Alpha<CR>", "home" },
 			i = { "<cmd>VimtexTocOpen<CR>", "index" },
+			n = { "<cmd>e $NOTES/index.md<CR>| cd $NOTES<CR>", "Notes" },
+			-- following lines to be added in .zshrc
+			-- export NOTES="~/.dropbox/40.NOTES"
 			k = { "<cmd>on<CR>", "max split" },
 			q = { "<cmd>wa! | qa!<CR>", "quit" },
 			u = { "<cmd>Telescope undo<CR>", "undo" },
@@ -227,7 +230,7 @@ return {
 				d = { "<cmd>SessionManager delete_session<CR>", "delete" },
 				l = { "<cmd>SessionManager load_session<CR>", "load" },
 			},
-			n = {
+			x = {
 				name = "NIXOS",
 				d = { "<cmd>TermExec cmd='nix develop'<CR><C-w>j", "develop" },
 				-- f = { "<cmd>TermExec cmd='sudo nixos-rebuild switch --flake ~/.config/nixos/'<CR><C-w>j", "flake" },
