@@ -970,3 +970,5 @@ autocmd FileType netrw setl bufhidden=delete “ or use :qa!
 
 `set wildmenu` “Shows multiple matches in one line
 
+------------
+
