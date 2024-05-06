@@ -1,8 +1,11 @@
 return {
 	"L3MON4D3/LuaSnip",
 	version = "2.3.0",
-	event = "VeryLazy",
+	event = { "BufReadPre", "BufNewFile" },
 	config = function()
+		require("luasnip").config.setup({
+			updateevents = "TextChanged, TextChangedI",
+		})
 		require("acs3985.users.snipps")
 		local ls = require("luasnip")
 

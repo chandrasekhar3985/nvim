@@ -5,7 +5,7 @@ local t = ls.text_node
 local i = ls.insert_node
 local c = ls.choice_node
 local f = ls.function_node
-
+---------------- examples for learning-----------------
 ls.add_snippets("lua", {
 
 	s("l", t("its working")),
@@ -33,7 +33,7 @@ ls.add_snippets("lua", {
 
 ls.add_snippets("lua", { -- use of choice node
 	s(
-		"h",
+		"k",
 		c(1, {
 			fmt("local {} = {}", {
 				i(1, "value"),
@@ -69,3 +69,19 @@ ls.add_snippets("lua", {
 		})
 	),
 })
+-- use dependencies
+ls.add_snippets("lua", {
+	s(
+		"ll",
+		fmt('local {} = require("{}")', {
+			f(function(values)
+				local value = values[1][1]
+				local path = vim.split(value, "%.")
+				return path[#path]
+			end, { 1 }),
+			i(1),
+		})
+	),
+})
+
+-----------end examples-----------
