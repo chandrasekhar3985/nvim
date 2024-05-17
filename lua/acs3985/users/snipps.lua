@@ -85,3 +85,19 @@ ls.add_snippets("lua", {
 })
 
 -----------end examples-----------
+ls.add_snippets("lua", { -- filetype declaration
+	-- Example How to set snippet parameters.
+	s(
+		{ -- Table 1: snippet parameters
+			trig = "hi",
+			dscr = "event",
+			regTrig = false,
+			priority = 1000,
+			snippetType = "autosnippet",
+		},
+		{ -- Table 2 : snippet nodes
+			t("Hello, World"),
+		}
+		-- Table 3: The advanced snippet options, left blank.
+	),
+})

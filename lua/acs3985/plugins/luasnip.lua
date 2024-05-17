@@ -5,6 +5,8 @@ return {
 	config = function()
 		require("luasnip").config.setup({
 			updateevents = "TextChanged, TextChangedI",
+			enable_autosnippets = true,
+			store_selection_keys = "<Tab>",
 		})
 		require("acs3985.users.snipps")
 		local ls = require("luasnip")
