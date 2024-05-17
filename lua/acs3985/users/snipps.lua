@@ -1,6 +1,8 @@
 local ls = require("luasnip")
 local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
+local extras = require("luasnip.extras")
+local rep = extras.rep
 local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
@@ -176,6 +178,24 @@ ls.add_snippets("tex", {
        \end{center}
      ]],
 			{ i(1, "Your Text") }
+		)
+	),
+})
+--- Repeated nodes
+ls.add_snippets("tex", {
+	s(
+		{ trig = "beg", dscr = "Begin and End Latex Environment" },
+		fmta(
+			[[
+        \begin{<>}
+          <>
+        \end{<>}
+      ]],
+			{
+				i(1, "document"),
+				i(2),
+				rep(1), -- this node repeats insert node i(1)
+			}
 		)
 	),
 })
