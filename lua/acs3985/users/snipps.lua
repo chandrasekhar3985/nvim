@@ -4,9 +4,11 @@ local fmta = require("luasnip.extras.fmt").fmta
 local extras = require("luasnip.extras")
 local rep = extras.rep
 local s = ls.snippet
+local sn = ls.snippet_node
 local t = ls.text_node
 local i = ls.insert_node
 local c = ls.choice_node
+local d = ls.dynamic_node
 local f = ls.function_node
 ---------------- examples for learning-----------------
 ls.add_snippets("lua", {
@@ -199,3 +201,57 @@ ls.add_snippets("tex", {
 		)
 	),
 })
+-- Custom snippet exit point with the zeroth insert node
+ls.add_snippets("tex", {
+	s(
+		{ trig = "eq1", dscr = " equation environment" },
+		fmta(
+			[[
+        \begin{equation}
+          <>
+        \end{equation}
+      ]],
+			{
+				i(0),
+			}
+		)
+	),
+})
+
+-- Insert node placeholder text
+ls.add_snippets("tex", {
+	s(
+		{ trig = "hr", dscr = "latex hr command" },
+		fmta([[\href{<>}{<>}]], {
+			i(1, "url"),
+			i(2, "display name"),
+		})
+	),
+})
+
+-- This is the `get_visual` function I've been talking about.
+-- ----------------------------------------------------------------------------
+-- Summary: When `LS_SELECT_RAW` is populated with a visual selection, the function
+-- returns an insert node whose initial text is set to the visual selection.
+-- When `LS_SELECT_RAW` is empty, the function simply returns an empty insert node.
+
+local get_visual = function(args, parent)
+	if #parent.snippet.env.LS_SELECT_RAW > 0 then
+		return sn(nil, i(1, parent.snippet.env.LS_SELECT_RAW))
+	else -- If LS_SELECT_RAW is empty, return a blank insert node
+		return sn(nil, i(1))
+	end
+end
+
+-------------------------------------------
+ls.add_snippets("tex", {
+	-- Example: italic font implementing visual selection
+	s(
+		{ trig = "tii", dscr = "Expands 'tii' into LaTeX's textit{} command." },
+		fmta("\\textit{<>}", {
+			d(1, get_visual),
+		})
+	),
+})
+
+--Regex snippet triggers---
