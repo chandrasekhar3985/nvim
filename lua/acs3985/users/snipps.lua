@@ -67,3 +67,35 @@ ls.add_snippets("all", {
 		t("Chandrasekhar Anabatula"),
 	}),
 })
+
+ls.add_snippets("tex", {
+	s(
+		{ trig = "cla", dscr = "documentclass", snippetType = "autosnippet" },
+		fmta([[ \documentclass[<>]{<>} ]], { i(1, "12pt, a4paper"), i(2, "artile") }),
+		{ condition = line_begin }
+	),
+	s(
+		{ trig = "pkg", dscr = "usepackage", snippetType = "snippet" },
+		c(1, {
+			fmta([[ \usepackage{<>} ]], { i(1, "geometry") }),
+			fmta([[ \usepackage[<>]{<>} ]], { i(1), i(2, "geometry") }),
+		}),
+		{ condition = line_begin }
+	),
+})
+
+ls.add_snippets("lua", { -- use of choice node
+	s(
+		"k",
+		c(1, {
+			fmt("local {} = {}", {
+				i(1, "value"),
+				i(2, "text"),
+			}),
+			fmt("{} = {}", {
+				i(1, "value"),
+				i(2, "text"),
+			}),
+		})
+	),
+})
