@@ -9,6 +9,7 @@ return {
 			store_selection_keys = "<Tab>",
 		})
 		require("acs3985.users.snipps")
+		require("acs3985.users.marks")
 		local ls = require("luasnip")
 
 		local M = {}
@@ -50,6 +51,11 @@ return {
 			ls.cleanup()
 			M.reload_package("<acs3985.users.snipps>")
 		end
+		local N = {}
+		function N.refresh_snippets()
+			ls.cleanup()
+			N.reload_package("<acs3985.users.marks")
+		end
 
 		local set = vim.keymap.set
 
@@ -60,5 +66,6 @@ return {
 		set(mode, "<c-n>", M.jump_prev)
 		set(mode, "<c-l>", M.change_choice)
 		set(normal, ",r", M.refresh_snippets)
+		set(normal, "<c-r>", N.refresh_snippets)
 	end,
 }

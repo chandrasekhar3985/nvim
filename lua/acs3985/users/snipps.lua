@@ -1,4 +1,4 @@
-------defining all shortcuts-------
+-----defining all shortcuts-------
 local ls = require("luasnip")
 local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
@@ -221,7 +221,7 @@ ls.add_snippets("tex", {
 		{ condition = line_begin }
 	),
 	s(
-		{ trig = ".f", dscr = "Figure Envirronment", snippetType = "autosnippet" },
+		{ trig = ".fig", dscr = "Figure Envirronment", snippetType = "autosnippet" },
 		c(1, {
 			fmta(
 				[[  
@@ -293,6 +293,45 @@ ls.add_snippets("tex", {
 		}),
 		{ condition = line_begin }
 	),
+	s(
+		{ trig = ".list", dscr = "Listing", snippetType = "autosnippet" },
+		c(1, {
+			fmta(
+				[[  
+           \begin{itemize}
+              \item <>
+           \end{itemize}
+        ]],
+				{
+					i(1, "item name"),
+				}
+			),
+			fmta(
+				[[
+          \begin{enumerate}[label=\roman*] %\roman*, \Roman*, \alph*, \Alph*, \arabic* 
+           	\item <>
+          \end{enumerate}
+         ]],
+				{
+					i(1, "item name"),
+				}
+			),
+			fmta(
+				[[  
+            \begin{description}
+    
+             \item[<>] : <>
+   
+            \end{description}      
+        ]],
+				{
+					i(1, "Item name"),
+					i(2, "Description"),
+				}
+			),
+		}),
+		{ condition = line_begin }
+	),
 })
 
 ls.add_snippets("tex", {
@@ -324,5 +363,153 @@ ls.add_snippets("tex", {
 			d(1, get_visual),
 		}),
 		{ condition = line_begin }
+	),
+})
+
+--------------------------text mode and visual mode---------------------------
+ls.add_snippets("tex", {
+	s(
+		{ trig = ".it", dscr = "Itallic", snippetType = "autosnippet" },
+		fmta([[<>\textit{<>}]], {
+			i(1),
+			d(1, get_visual),
+		})
+	),
+	s(
+		{ trig = ".tt", dscr = "teletype or typewritter", snippetType = "autosnippet" },
+		fmta([[<>\texttt{<>}]], {
+			i(1),
+			d(1, get_visual),
+		})
+	),
+	s(
+		{ trig = ".bf", dscr = "bold font", snippetType = "autosnippet" },
+		fmta([[<>\textbf{<>}]], {
+			i(1),
+			d(1, get_visual),
+		})
+	),
+	s(
+		{ trig = ".sc", dscr = "small caps", snippetType = "autosnippet" },
+		fmta([[<>\textsc{<>}]], {
+			i(1),
+			d(1, get_visual),
+		})
+	),
+	s(
+		{ trig = ".sl", dscr = "slanted text", snippetType = "autosnippet" },
+		fmta([[<>\textsl{<>}]], {
+			i(1),
+			d(1, get_visual),
+		})
+	),
+	s(
+		{ trig = ".sub", dscr = "subscript", snippetType = "autosnippet" },
+		fmta([[<>\textsubscript{<>}]], {
+			i(1),
+			d(1, get_visual),
+		})
+	),
+	s(
+		{ trig = ".sup", dscr = "super", snippetType = "autosnippet" },
+		fmta([[<>\textsuperscript{<>}]], {
+			i(1),
+			d(1, get_visual),
+		})
+	),
+})
+
+-----------------Mathmode----------------------------
+------Mathfonts and notations------------------------
+ls.add_snippets("tex", {
+	-- Expand  .fr to mathfrak fonts
+	s(
+		{ trig = ".frk", dscr = " mathfrak fonts", snippetType = "autosnippet" },
+		fmta([[ <>\mathfrak{<>} ]], {
+			i(1),
+			d(1, get_visual),
+		}),
+		{ condition = tex_utils.in_mathzone }
+	),
+	s(
+		{ trig = ".cal", dscr = " mathcal fonts", snippetType = "autosnippet" },
+		fmta([[ <>\mathcal{<>} ]], {
+			i(1),
+			d(1, get_visual),
+		}),
+		{ condition = tex_utils.in_mathzone }
+	),
+	s(
+		{ trig = ".scr", dscr = " mathscr fonts", snippetType = "autosnippet" },
+		fmta([[ <>\mathscr{<>} ]], {
+			i(1),
+			d(1, get_visual),
+		}),
+		{ condition = tex_utils.in_mathzone }
+	),
+	s(
+		{ trig = ".frac", dscr = " fractions", snippetType = "autosnippet" },
+		fmta([[ \frac{<>}{<>} ]], {
+			i(1, "x"),
+			i(2, "y"),
+		}),
+		{ condition = tex_utils.in_mathzone }
+	),
+})
+
+--------Math Symbols--------
+ls.add_snippets("tex", {
+	s(
+		{ trig = ";a", dscr = " alpha", snippetType = "autosnippet" },
+		fmta([[\alpha ]], {}),
+		{ condition = tex_utils.in_mathzone }
+	),
+	s(
+		{ trig = ";b", dscr = " beta", snippetType = "autosnippet" },
+		fmta([[\beta ]], {}),
+		{ condition = tex_utils.in_mathzone }
+	),
+	s(
+		{ trig = ";g", dscr = "gamma", snippetType = "autosnippet" },
+		fmta([[\gamma ]], {}),
+		{ condition = tex_utils.in_mathzone }
+	),
+	s(
+		{ trig = ";t", dscr = " theta", snippetType = "autosnippet" },
+		fmta([[\theta ]], {}),
+		{ condition = tex_utils.in_mathzone }
+	),
+	s(
+		{ trig = ";in", dscr = " infinity", snippetType = "autosnippet" },
+		fmta([[\infty ]], {}),
+		{ condition = tex_utils.in_mathzone }
+	),
+	s(
+		{ trig = ";d", dscr = " div", snippetType = "autosnippet" },
+		fmta([[\div ]], {}),
+		{ condition = tex_utils.in_mathzone }
+	),
+	s(
+		{ trig = ";m", dscr = " multiplication", snippetType = "autosnippet" },
+		fmta([[\times ]], {}),
+		{ condition = tex_utils.in_mathzone }
+	),
+	s(
+		{ trig = ";del", dscr = " delta", snippetType = "autosnippet" },
+		fmta([[\delta ]], {}),
+		{ condition = tex_utils.in_mathzone }
+	),
+	s(
+		{ trig = ";p", dscr = " pi", snippetType = "autosnippet" },
+		fmta([[\pi ]], {}),
+		{ condition = tex_utils.in_mathzone }
+	),
+	s(
+		{ trig = ".sq", dscr = " squareroot", snippetType = "autosnippet" },
+		c(1, {
+			fmta([[ \sqrt{<>} ]], { i(1, "value") }),
+			fmta([[ \sqrt{<>}{<>} ]], { i(1, "root"), i(2, "value") }),
+		}),
+		{ condition = tex_utils.in_mathzone }
 	),
 })

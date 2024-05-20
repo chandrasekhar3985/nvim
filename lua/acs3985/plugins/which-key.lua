@@ -115,8 +115,8 @@ return {
 				h = { "<cmd>LocalHighlightToggle<CR>", "highlight" },
 				k = { "<cmd>VimtexClean<CR>", "kill aux" },
 				-- l = { "<cmd>lua vim.g.cmptoggle = not vim.g.cmptoggle<CR>", "LSP" },
-				-- m = { "<cmd>MarkdownPreview<CR>", "markdown preview" },
-				m = { "<cmd>TermExec cmd='ssh brastmck@eofe10.mit.edu'<CR>", "mit ssh" },
+				m = { "<cmd>MarkdownPreview<CR>", "markdown preview" },
+				-- n = { "<cmd>TermExec cmd='ssh brastmck@eofe10.mit.edu'<CR>", "mit ssh" },
 				p = { "<cmd>TermExec cmd='python %:p:r.py'<CR>", "python" },
 				-- P = { "<cmd>!python %:p:r.py<CR>", "python" },
 				r = { "<cmd>VimtexErrors<CR>", "report errors" },
@@ -223,6 +223,7 @@ return {
 			m = {
 				name = "MARKDOWN",
 				v = { "<cmd>Slides<CR>", "view slides" },
+				m = { "<cmd>MarkdownPreviewToggle<CR>", "Markdown Preview in Browser" },
 			},
 			S = {
 				name = "SESSIONS",
