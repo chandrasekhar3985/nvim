@@ -1,4 +1,6 @@
-# VIM
+# VIM[^1]
+[^1]: This tutorial applicable to nvim some extent.
+
 Vim is a modal editor.
 
 [![IMG-2308.jpg](https://i.postimg.cc/6Q1ggPxn/IMG-2308.jpg)](https://postimg.cc/PLYS82x5)
@@ -971,4 +973,3 @@ autocmd FileType netrw setl bufhidden=delete “ or use :qa!
 `set wildmenu` “Shows multiple matches in one line
 
 ------------
-

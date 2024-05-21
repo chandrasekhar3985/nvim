@@ -56,6 +56,7 @@ ls.add_snippets("markdown", {
 		{ trig = ".ma", dscr = "Highlighting text", snippetType = "autosnippet" },
 		fmt([[ {}<mark>{}</mark>  ]], { i(1), d(1, get_visual) })
 	),
+	s({ trig = ".code", dscr = "code", snippetType = "autosnippet" }, fmt([[ {}`{}` ]], { i(1), d(1, get_visual) })),
 })
 
 --------------------objects-------
@@ -63,5 +64,101 @@ ls.add_snippets("markdown", {
 	s(
 		{ trig = ".url", dscr = "url", snippetType = "autosnippet" },
 		fmta([[ [<>](<>) ]], { i(1, "Name"), i(2, "url") })
+	),
+	s(
+		{ trig = ".pic", dscr = "pic", snippetType = "autosnippet" },
+		fmta([[ ![<>](<>) ]], { i(1, "pic name"), i(2, "pic url/directory") })
+	),
+	s(
+		{ trig = ".upic", dscr = "picurl", snippetType = "autosnippet" },
+		fmta([[ [![<>](<>)](<>) ]], { i(1, "Name"), i(2, "pic url"), i(3, "link url") })
+	),
+})
+
+----------symbols and keys--------------------
+ls.add_snippets("all", {
+	s({ trig = ".tree", snippetType = "autosnippet" }, { t("🌲 ") }),
+	s({ trig = ".bulb", snippetType = "autosnippet" }, { t("💡 ") }),
+	s({ trig = ".copyright", snippetType = "autosnippet" }, { t("©") }),
+	s({ trig = ".notes", snippetType = "autosnippet" }, { t("📓 ") }),
+	s({ trig = ".warning", snippetType = "autosnippet" }, { t("⚠") }),
+	s({ trig = ".setting", snippetType = "autosnippet" }, { t("⚙") }),
+	s({ trig = ".light", snippetType = "autosnippet" }, { t("⚡") }),
+	s({ trig = ".pot", snippetType = "autosnippet" }, { t("🪴") }),
+	s({ trig = ".tick", snippetType = "autosnippet" }, { t("✅") }),
+	s({ trig = ".cross", snippetType = "autosnippet" }, { t("❌") }),
+	s({ trig = ".flag", snippetType = "autosnippet" }, { t("🇮") }),
+	s({ trig = ".love", snippetType = "autosnippet" }, { t("💕") }),
+	s({ trig = ".page", snippetType = "autosnippet" }, { t("🗒️") }),
+})
+
+----------code blocks---------------
+
+ls.add_snippets("markdown", {
+	s(
+		{ trig = ".sh", dscr = "bash", snippetType = "autosnippet" },
+		fmta(
+			[[ 
+            <>```sh
+            <>
+            ```
+        ]],
+			{ i(1), d(1, get_visual) }
+		)
+	),
+	s(
+		{ trig = ".lua", dscr = "lua", snippetType = "autosnippet" },
+		fmta(
+			[[ 
+            <>```lua
+            <>
+            ```
+        ]],
+			{ i(1), d(1, get_visual) }
+		)
+	),
+	s(
+		{ trig = ".zsh", dscr = "zsh", snippetType = "autosnippet" },
+		fmta(
+			[[ 
+            <>```zsh
+            <>
+            ```
+        ]],
+			{ i(1), d(1, get_visual) }
+		)
+	),
+	s(
+		{ trig = ".mer", dscr = "mermaid", snippetType = "autosnippet" },
+		fmta(
+			[[ 
+            <>```mermaid
+            <>
+            ```
+        ]],
+			{ i(1), d(1, get_visual) }
+		)
+	),
+	s(
+		{ trig = ".html", dscr = "html", snippetType = "autosnippet" },
+		fmta(
+			[[ 
+            <>```html
+            <>
+            ```
+        ]],
+			{ i(1), d(1, get_visual) }
+		)
+	),
+	s(
+		{ trig = ".tex", dscr = "tex", snippetType = "autosnippet" },
+		fmta(
+			[[ 
+            <>```tex
+            <>
+            ```
+        ]],
+			{ i(1), d(1, get_visual) }
+		)
 	),
 })
