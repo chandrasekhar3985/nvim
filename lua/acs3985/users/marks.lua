@@ -81,15 +81,16 @@ ls.add_snippets("all", {
 	s({ trig = ".bulb", snippetType = "autosnippet" }, { t("💡 ") }),
 	s({ trig = ".copyright", snippetType = "autosnippet" }, { t("©") }),
 	s({ trig = ".notes", snippetType = "autosnippet" }, { t("📓 ") }),
-	s({ trig = ".warning", snippetType = "autosnippet" }, { t("⚠") }),
-	s({ trig = ".setting", snippetType = "autosnippet" }, { t("⚙") }),
+	s({ trig = ".warning", snippetType = "autosnippet" }, { t("⚠ ") }),
+	s({ trig = ".setting", snippetType = "autosnippet" }, { t("⚙ ") }),
 	s({ trig = ".light", snippetType = "autosnippet" }, { t("⚡") }),
-	s({ trig = ".pot", snippetType = "autosnippet" }, { t("🪴") }),
-	s({ trig = ".tick", snippetType = "autosnippet" }, { t("✅") }),
-	s({ trig = ".cross", snippetType = "autosnippet" }, { t("❌") }),
-	s({ trig = ".flag", snippetType = "autosnippet" }, { t("🇮") }),
-	s({ trig = ".love", snippetType = "autosnippet" }, { t("💕") }),
-	s({ trig = ".page", snippetType = "autosnippet" }, { t("🗒️") }),
+	s({ trig = ".pot", snippetType = "autosnippet" }, { t("🪴 ") }),
+	s({ trig = ".tick", snippetType = "autosnippet" }, { t("✅ ") }),
+	s({ trig = ".cross", snippetType = "autosnippet" }, { t("❌ ") }),
+	s({ trig = ".flag", snippetType = "autosnippet" }, { t("🇮 ") }),
+	s({ trig = ".love", snippetType = "autosnippet" }, { t("💕  ") }),
+	s({ trig = ".page", snippetType = "autosnippet" }, { t("🗒️ ") }),
+	s({ trig = ".bt", snippetType = "autosnippet" }, { t("`") }),
 })
 
 ----------code blocks---------------
@@ -159,6 +160,20 @@ ls.add_snippets("markdown", {
             ```
         ]],
 			{ i(1), d(1, get_visual) }
+		)
+	),
+	s(
+		{ trig = ".mind", dscr = "mindmap", snippetType = "autosnippet" },
+		fmta(
+			[[ 
+            ```mermaid
+            mindmap
+              root ((<>))
+                <>
+            
+            ```
+        ]],
+			{ i(1, "mindmap"), i(2, "origins") }
 		)
 	),
 })
