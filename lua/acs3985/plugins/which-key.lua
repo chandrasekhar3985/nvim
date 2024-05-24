@@ -224,6 +224,7 @@ return {
 				name = "MARKDOWN",
 				v = { "<cmd>Slides<CR>", "view slides" },
 				m = { "<cmd>MarkdownPreviewToggle<CR>", "Markdown Preview in Browser" },
+				g = { "<cmd>Glow<CR>", "Markdown Preview in nvim" },
 			},
 			S = {
 				name = "SESSIONS",

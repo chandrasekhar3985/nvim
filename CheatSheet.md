@@ -2,6 +2,26 @@
 [^1]: This tutorial applicable to nvim some extent.
 
 Vim is a modal editor.
+```mermaid
+
+flowchart LR
+%% colors 
+linkStyle default stroke-width:4px
+classDef red fill:#ff0000, strroke:#000, stroke-width:2px,color:#ffffff
+classDef blue fill:#0000ff, strroke:#000, stroke-width:2px,color:#ffffff
+classDef magenda fill:#870087, strroke:#000, stroke-width:2px,color:#ffffff
+classDef violet fill:#af00d7, strroke:#000, stroke-width:2px,color:#ffffff
+classDef green fill:#006600, strroke:#000, stroke-width:2px,color:#ffffff
+
+V((Normal 'Esc')):::violet <-->|mode| I(Insert):::green-.->|key  binding|i(i)==>|Function| i1(Inserting Text)
+V<-->   R(Replace):::magenda-.->r(R)==>|Replace contineous|r1(Replacing Text)
+V<-->   V1(Visual):::blue-.->v(v)==>v1(Selecting Text)
+V<-->   V2(Visual  Line):::blue-.->l("Shift + v")==>v1
+V<-->   V3(Visual Block):::blue-.-> b(ctrl + v)==>v1
+V<-->   C(Command Line):::red-.-> c(:)==>c1(Execting command)
+R-.->r2(r)==>|Replace  single text under curser|r1
+
+```
 
 [![IMG-2308.jpg](https://i.postimg.cc/6Q1ggPxn/IMG-2308.jpg)](https://postimg.cc/PLYS82x5)
 
