@@ -1,18 +1,11 @@
-██████╗██╗  ██╗ █████╗ ███╗   ██╗██████╗ ██████╗  █████╗ ███████╗███████╗██╗  ██╗██╗  ██╗ █████╗ ██████╗ 
-██╔════╝██║  ██║██╔══██╗████╗  ██║██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝██║ ██╔╝██║  ██║██╔══██╗██╔══██╗
-██║     ███████║███████║██╔██╗ ██║██║  ██║██████╔╝███████║███████╗█████╗  █████╔╝ ███████║███████║██████╔╝
-██║     ██╔══██║██╔══██║██║╚██╗██║██║  ██║██╔══██╗██╔══██║╚════██║██╔══╝  ██╔═██╗ ██╔══██║██╔══██║██╔══██╗
-╚██████╗██║  ██║██║  ██║██║ ╚████║██████╔╝██║  ██║██║  ██║███████║███████╗██║  ██╗██║  ██║██║  ██║██║  ██║
- ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
+# Neovim Installation and Configuration Procedure  
 
-# Neovim Installation and Configuration Procedure
-
-[![4252024133346.png](https://i.postimg.cc/NjYXTnnM/4252024133346.png)](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://github.com/neovim/neovim&ved=2ahUKEwitx7WhrKiGAxXszTgGHXsICB4QFnoECB8QAQ&sqi=2&usg=AOvVaw2YkFEe39NA-NV2yH4uUbTV)
-[Referemce](https://raw.githubusercontent.com/chandrasekhar3985/.brenconfig/master/README.md)
+[![4252024133346.png](https://i.postimg.cc/NjYXTnnM/4252024133346.png)](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://github.com/neovim/neovim&ved=2ahUKEwitx7WhrKiGAxXszTgGHXsICB4QFnoECB8QAQ&sqi=2&usg=AOvVaw2YkFEe39NA-NV2yH4uUbTV)  
+[Reference](https://raw.githubusercontent.com/chandrasekhar3985/.brenconfig/master/README.md)   
 
 **TABLE OF INDEX** 
 
-[1.MAC INSTALLATION](#MAC INSTALLATION)
+1. [MAC INSTALLATION](#MAC-INSTALLATION)
 
 
 
@@ -115,8 +108,8 @@ copy paste following script in your terminal
   In the Preset menu, select custom and set the Command to nvim 
   with the Arguments as follows:
 
-`-headless -c "VimtexInverseSearch %l '%f'"` 
-**_Now change directory to `cd ~/.config` _**
+`-headless -c "VimtexInverseSearch %l '%f'"`   
+**_Now change directory to `cd ~/.config`_** 
 
 Run following command
 

@@ -94,7 +94,9 @@ return {
 			j = { "<cmd>clo<CR>", "drop split" },
 			-- h = { "<cmd>Alpha<CR>", "home" },
 			i = { "<cmd>VimtexTocOpen<CR>", "index" },
-			n = { "<cmd>e $NOTES/index.md<CR>| cd $NOTES<CR>", "Notes" },
+			n = { "<cmd>cd $NOTES <CR>|  <cmd> NvimTreeToggle<CR>", "NOTES DIR" },
+			o = { "<cmd>cd ~/.config/nvim/<CR> |  <cmd> NvimTreeToggle<CR>", "Neovim Config Dir" },
+			h = { "<cmd>cd $HOME <CR>|  <cmd> NvimTreeToggle<CR>", "HOME DIR" },
 			-- following lines to be added in .zshrc
 			-- export NOTES="~/.dropbox/40.NOTES"
 			k = { "<cmd>on<CR>", "max split" },
