@@ -7,7 +7,7 @@
 
 1. [MAC INSTALLATION](#MAC-INSTALLATION)
 
-
+---
 
 
 # MAC INSTALLATION
@@ -23,6 +23,8 @@ copy paste following script in your terminal
 
 - Recomendate follow the tutorial of terminal beautification.
 [Terminal beautification](https://drive.google.com/file/d/170pS2MbXCrOy1pwLtpEXOgWYaWkY5JzH/view?usp=drivesdk) 
+
+---
 - Then update and upgrade home brew.
   ```sh
   brew update
@@ -57,6 +59,7 @@ copy paste following script in your terminal
   ```sh
   brew install lua-language-server
   ```
+  ---
   **_Install following packages_** 
   ```sh
   brew install fzf
@@ -83,6 +86,13 @@ copy paste following script in your terminal
   ```sh
   brew install glow
   ```
+  ```sh
+  brew install slides
+  ```
+  ```sh
+  brew install marksman
+  ```
+  ---
   **_INSTALL LATEX_**
   ```sh
   brew install --cask mactex

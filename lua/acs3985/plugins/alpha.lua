@@ -41,12 +41,14 @@ return {
 		-- Set menu
 		dashboard.section.buttons.val = {
 			dashboard.button("s", "  Sessions", "<cmd>SessionManager load_session<CR>"),
-			dashboard.button("n", "📓 Notes Folder", "<cmd>cd $NOTES<CR> | <cmd>NvimTreeToggle<CR>"),
+			dashboard.button("n", " Notes Folder", "<cmd>cd $NOTES<CR> | <cmd>NvimTreeToggle<CR>"),
 			dashboard.button("r", "♣ Recent", ":Telescope oldfiles <CR>"),
 			dashboard.button("e", "⎈ Explorer", "<cmd>NvimTreeToggle<CR>"),
 			dashboard.button("f", "  Find", ":Telescope find_files <CR>"),
+			dashboard.button("o", "  operation Manual", ":Slides ~/.config/nvim/operation_manual.md<CR>"),
+			dashboard.button("i", "  Installation Manual", ":Slides ~/.config/nvim/Instalation_manual.md<CR>"),
 			dashboard.button("c", "  Config", ":e $MYVIMRC <CR>"),
-			dashboard.button("i", "  Info", "<cmd>e ~/.config/nvim/CheatSheet.md<cr>"),
+			dashboard.button("v", "  Learn Vim", "<cmd>view ~/.config/nvim/CheatSheet.md<cr>"),
 			dashboard.button("p", "  Plugins", "<cmd>Lazy<cr>"),
 			dashboard.button("h", "  Checkhealth", "<cmd>checkhealth<cr>"),
 			dashboard.button("q", "  Quit", "<cmd>qa!<CR>"),

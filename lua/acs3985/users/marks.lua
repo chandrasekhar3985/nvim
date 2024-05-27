@@ -56,17 +56,17 @@ ls.add_snippets("markdown", {
 		{ trig = ".ma", dscr = "Highlighting text", snippetType = "autosnippet" },
 		fmt([[ {}<mark>{}</mark>  ]], { i(1), d(1, get_visual) })
 	),
-	s({ trig = ".code", dscr = "code", snippetType = "autosnippet" }, fmt([[ {}`{}` ]], { i(1), d(1, get_visual) })),
+	s({ trig = ".co", dscr = "code", snippetType = "autosnippet" }, fmt([[ {}`{}` ]], { i(1), d(1, get_visual) })),
 })
 
 --------------------objects-------
 ls.add_snippets("markdown", {
 	s(
-		{ trig = ".url", dscr = "url", snippetType = "autosnippet" },
+		{ trig = ".url", dscr = ".url", snippetType = "autosnippet" },
 		fmta([[ [<>](<>) ]], { i(1, "Name"), i(2, "url") })
 	),
 	s(
-		{ trig = ".pic", dscr = "pic", snippetType = "autosnippet" },
+		{ trig = ".pic", dscr = ".pic", snippetType = "autosnippet" },
 		fmta([[ ![<>](<>) ]], { i(1, "pic name"), i(2, "pic url/directory") })
 	),
 	s(
@@ -80,14 +80,14 @@ ls.add_snippets("all", {
 	s({ trig = ".tree", snippetType = "autosnippet" }, { t("🌲 ") }),
 	s({ trig = ".bulb", snippetType = "autosnippet" }, { t("💡 ") }),
 	s({ trig = ".copyright", snippetType = "autosnippet" }, { t("©") }),
-	s({ trig = ".notes", snippetType = "autosnippet" }, { t("📓 ") }),
-	s({ trig = ".warning", snippetType = "autosnippet" }, { t("⚠ ") }),
-	s({ trig = ".setting", snippetType = "autosnippet" }, { t("⚙ ") }),
+	s({ trig = ".note", snippetType = "autosnippet" }, { t("📓 ") }),
+	s({ trig = ".warn", snippetType = "autosnippet" }, { t("⚠ ") }),
+	s({ trig = ".sett", snippetType = "autosnippet" }, { t("⚙ ") }),
 	s({ trig = ".light", snippetType = "autosnippet" }, { t("⚡") }),
 	s({ trig = ".pot", snippetType = "autosnippet" }, { t("🪴 ") }),
 	s({ trig = ".tick", snippetType = "autosnippet" }, { t("✅ ") }),
 	s({ trig = ".cross", snippetType = "autosnippet" }, { t("❌ ") }),
-	s({ trig = ".flag", snippetType = "autosnippet" }, { t("🇮 ") }),
+	s({ trig = ".flag", snippetType = "autosnippet" }, { t("🇮🇳 ") }),
 	s({ trig = ".love", snippetType = "autosnippet" }, { t("💕  ") }),
 	s({ trig = ".page", snippetType = "autosnippet" }, { t("🗒️ ") }),
 	s({ trig = ".bt", snippetType = "autosnippet" }, { t("`") }),

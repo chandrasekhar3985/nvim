@@ -71,7 +71,7 @@ ls.add_snippets("all", {
 ---------Snippets for line begin---------
 ls.add_snippets("tex", {
 	s(
-		{ trig = "cla", dscr = "documentclass", snippetType = "autosnippet" },
+		{ trig = ".cla", dscr = "documentclass", snippetType = "autosnippet" },
 		fmta(
 			[[ \documentclass[<>]{<>} % article, book, report, Thesis, Journal ]],
 			{ i(1, "12pt, a4paper"), i(2, "artile") }
@@ -79,7 +79,7 @@ ls.add_snippets("tex", {
 		{ condition = line_begin }
 	),
 	s(
-		{ trig = "pkg", dscr = "usepackage", snippetType = "snippet" },
+		{ trig = ".pkg", dscr = "usepackage", snippetType = "snippet" },
 		c(1, {
 			fmta([[ \usepackage{<>} ]], { i(1, "geometry") }),
 			fmta([[ \usepackage[<>]{<>} ]], { i(1), i(2, "geometry") }),
@@ -87,7 +87,7 @@ ls.add_snippets("tex", {
 		{ condition = line_begin }
 	),
 	s(
-		{ trig = "bg", dscr = "A generic new environmennt", snippetType = "autosnippet" },
+		{ trig = ".bg", dscr = "A generic new environmennt", snippetType = "autosnippet" },
 		fmta(
 			[[
      \begin{<>}
@@ -123,23 +123,23 @@ ls.add_snippets("tex", {
 		{ condition = line_begin } -- set condition in the `opts` table
 	),
 	s(
-		{ trig = "h4", dscr = "subsubsection", snippetType = "autosnippet" },
+		{ trig = "h5", dscr = "subsubsection", snippetType = "autosnippet" },
 		fmta([[<>\subsubsection{<>}% Name of subsection]], { i(1), d(1, get_visual) }),
 		{ condition = line_begin } -- set condition in the `opts` table
 	),
 	s(
-		{ trig = "h5", dscr = "paragraph", snippetType = "autosnippet" },
+		{ trig = "h6", dscr = "paragraph", snippetType = "autosnippet" },
 		fmta([[<>\paragraph{<>}% paragraph]], { i(1), d(1, get_visual) }),
 		{ condition = line_begin } -- set condition in the `opts` table
 	),
 	s(
 
-		{ trig = "h6", dscr = "subparagraph", snippetType = "autosnippet" },
+		{ trig = "h7", dscr = "subparagraph", snippetType = "autosnippet" },
 		fmta([[<>\subparagraph{<>}]], { i(1), d(1, get_visual) }),
 		{ condition = line_begin } -- set condition in the `opts` table
 	),
 	s(
-		{ trig = "mv", dscr = "math visual mode", snippetType = "autosnippet" },
+		{ trig = ".mv", dscr = "math visual mode", snippetType = "autosnippet" },
 		fmta(
 			[[ 
             \[
@@ -166,6 +166,7 @@ ls.add_snippets("tex", {
 					i(3),
 				}
 			),
+
 			fmta(
 				[[ 
             \usepackage{authblk}
@@ -190,7 +191,7 @@ ls.add_snippets("tex", {
 		{ condition = line_begin } -- set condition in the `opts` table
 	),
 	s(
-		{ trig = ".pkg", dscr = "Load nessarry packages", snippetType = "autosnippet" },
+		{ trig = ",pkg", dscr = "Load nessarry packages", snippetType = "autosnippet" },
 		fmta(
 			[[ 
           \usepackage(amsmath, amssymb, amsfonnts)  %for mathematics

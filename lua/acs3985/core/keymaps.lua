@@ -52,3 +52,6 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
 ----Directory  Navigation______
 keymap.set("n", "<S-n>", "<cmd>cd $NOTES<CR> | <cmd>:NvimTreeToggle<CR>")
 keymap.set("n", "<S-h>", "<cmd>cd $HOME<CR> | <cmd>:NvimTreeToggle<CR>")
+
+-- follow-md-markdown
+keymap.set("n", "<bs>", ":edit #<cr>", { silent = true })
