@@ -30,6 +30,30 @@ ls.add_snippets("markdown", {
 	s({ trig = "h2", snippetType = "autosnippet" }, fmta([[## <> ]], { i(1) }), { condition = line_begin }),
 	s({ trig = "h3", snippetType = "autosnippet" }, fmta([[### <> ]], { i(1) }), { condition = line_begin }),
 	s({ trig = "h4", snippetType = "autosnippet" }, fmta([[#### <> ]], { i(1) }), { condition = line_begin }),
+	s({ trig = "h5", snippetType = "autosnippet" }, fmta([[##### <> ]], { i(1) }), { condition = line_begin }),
+	s(
+		{ trig = ".tab", snippetType = "autosnippet" },
+		fmta(
+			[[
+          |<>|<>|
+          |--|--|
+          |<>|<>|
+         ]],
+			{ i(1, "head1"), i(2, "head2"), i(3, "content1"), i(4, "content2") }
+		),
+		{ condition = line_begin }
+	),
+	s(
+		{ trig = ".def", snippetType = "autosnippet" },
+		fmt(
+			[[
+        {}
+        :  {}
+        ]],
+			{ i(1, "Defination"), i(2, "Description") }
+		),
+		{ condition = line_begin }
+	),
 })
 
 -----------------textediting--------------------
