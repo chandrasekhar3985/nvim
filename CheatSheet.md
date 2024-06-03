@@ -84,7 +84,7 @@ _Navigation:_
  
  
  
- <h4 style="color:red;">**INSERT MODE**</h4>
+ 
 
 **INSERTMODE**
 
@@ -211,11 +211,10 @@ Selecting block of character as a column. When press `I` insert more, when we wr
 <h4 style="color:red;">**INDENT,REPEAT AND TAB**</h4>
 
 **INDENT,REPEAT AND TAB**
-
-It follows the <number><verb><noun> rule.[NORMAL MODE]
+ It follows the <number><verb><noun> rule.[NORMAL MODE]
 
 ` > h` or `> l` :indent to the write
-`>>` : indent the current line RIGHT
+`>>` : indent the current line RIGH
 `<<` : indent the current line LEFT
 
 `>j` : indent current and line below.

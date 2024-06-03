@@ -80,7 +80,11 @@ ls.add_snippets("markdown", {
 		{ trig = ".ma", dscr = "Highlighting text", snippetType = "autosnippet" },
 		fmt([[ {}<mark>{}</mark>  ]], { i(1), d(1, get_visual) })
 	),
-	s({ trig = ".co", dscr = "code", snippetType = "autosnippet" }, fmt([[ {}`{}` ]], { i(1), d(1, get_visual) })),
+	s({ trig = ".co", dscr = "code", snippetType = "autosnippet" }, fmt([[ {}`{}`]], { i(1), d(1, get_visual) })),
+	s(
+		{ trig = ".cb", dscr = "bold code", snippetType = "autosnippet" },
+		fmt([[ {}**`{}`** :]], { i(1), d(1, get_visual) })
+	),
 })
 
 --------------------objects-------
@@ -101,7 +105,7 @@ ls.add_snippets("markdown", {
 
 ----------symbols and keys--------------------
 ls.add_snippets("all", {
-	s({ trig = ".tree", snippetType = "autosnippet" }, { t("🌲 ") }),
+	s({ trig = ".tree", snippetType = "autosnippet" }, { t("🌴 ") }),
 	s({ trig = ".bulb", snippetType = "autosnippet" }, { t("💡 ") }),
 	s({ trig = ".copyright", snippetType = "autosnippet" }, { t("©") }),
 	s({ trig = ".note", snippetType = "autosnippet" }, { t("📓 ") }),

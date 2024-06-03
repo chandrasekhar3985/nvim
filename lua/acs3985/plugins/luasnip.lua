@@ -66,6 +66,6 @@ return {
 		set(mode, "<c-n>", M.jump_prev)
 		set(mode, "<c-l>", M.change_choice)
 		set(normal, ",r", M.refresh_snippets)
-		set(normal, "<c-r>", N.refresh_snippets)
+		set(normal, ",s", N.refresh_snippets)
 	end,
 }

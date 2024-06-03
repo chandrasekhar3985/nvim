@@ -1,21 +1,19 @@
 vim.g.mapleader = " "
-vim.g.neovide_input_macos_alt_is_meta = true
-
 local keymap = vim.keymap -- for consiseness
 
--- GENERAL KEYMAPPING jkjkjkjkjkjkjkjkjjkjkjkjkjkjjkjkk
+-- GENERAL KEY MAPPING
 
 keymap.set("i", "jk", "<Esc>") -- exit from insert to normal mode
 
 -- windows
-keymap.set("n", "<S-t>", "<C-w>v") -- split window vertically
+keymap.set("n", "<S-w>", "<C-w>v") -- split window vertically
 keymap.set("n", "<S-s>", "<C-w>s") -- split window horizontally.
 keymap.set("n", "<S-e>", "<C-w>=") -- makr split window equally.
-keymap.set("n", "<S-c>", ":close<CR>") -- close window
+keymap.set("n", "<S-k>", ":close<CR>") -- close window
 
 -- tabs
-keymap.set("n", "<C-b>", ":tabnew<CR>") -- open new tab
-keymap.set("n", "<C-c>", ":tabclose<CR>") -- close tab
+keymap.set("n", "<S-t>", ":tabnew<CR>") -- open new tab
+keymap.set("n", "<S-q>", ":tabclose<CR>") -- close tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") -- switch to nexttab
 keymap.set("n", "<leader>tp", ":tabp<CR>") -- swotch to previous tab
 
@@ -55,3 +53,14 @@ keymap.set("n", "<S-h>", "<cmd>cd $HOME<CR> | <cmd>:NvimTreeToggle<CR>")
 
 -- follow-md-markdown
 keymap.set("n", "<bs>", ":edit #<cr>", { silent = true })
+
+-- Spelling
+vim.keymap.set("n", "<C-s>", function()
+	require("telescope.builtin").spell_suggest(require("telescope.themes").get_cursor({
+		previewer = false,
+		layout_config = {
+			width = 50,
+			height = 15,
+		},
+	}))
+end, { remap = true })
