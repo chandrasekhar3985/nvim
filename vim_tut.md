@@ -36,11 +36,10 @@ Start the program by typing :`vim`
 - **`w`** :write/save the file with changes
 - **`wq`** :save and quit the file
 ---
-<h4  style="color:red;">**NORMAL MODE**</h4>
 ### NORMAL MODE
 
 - **`x`**  :Delete a Text
-  **_NAVIGATION_**
+###  NAVIGATION
 - **`h`** :Move  left
 - **`j`** :Move Down
 - **`k`** :Move up
