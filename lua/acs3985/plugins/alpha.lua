@@ -48,7 +48,7 @@ return {
 			dashboard.button("o", "  operation Manual", ":Slides ~/.config/nvim/operation_manual.md<CR>"),
 			dashboard.button("i", "  Installation Manual", ":Slides ~/.config/nvim/Instalation_manual.md<CR>"),
 			dashboard.button("c", "  Config", ":e $MYVIMRC <CR>"),
-			dashboard.button("v", "  Learn Vim", "<cmd>view ~/.config/nvim/CheatSheet.md<cr>"),
+			dashboard.button("v", "  Learn Vim", "<cmd>view ~/.config/nvim/vim_tut.md<cr>"),
 			dashboard.button("p", "  Plugins", "<cmd>Lazy<cr>"),
 			dashboard.button("h", "  Checkhealth", "<cmd>checkhealth<cr>"),
 			dashboard.button("q", "  Quit", "<cmd>qa!<CR>"),
